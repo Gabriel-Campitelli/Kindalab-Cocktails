@@ -3,6 +3,9 @@
 
 module.exports = function (config) {
   config.set({
+    resolve: {
+      extensions: ['.ts']
+    },
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
