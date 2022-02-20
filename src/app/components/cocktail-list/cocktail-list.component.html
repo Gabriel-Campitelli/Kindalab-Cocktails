@@ -1,5 +1,10 @@
-<div>
-  <div fxFlex="column" *ngFor="let drink of drinks">
+<div fxLayout="column" fxLayoutAlign="center center">
+  <div
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    class="container"
+    *ngFor="let drink of drinks"
+  >
     <app-cocktail-card [drink]="drink"> </app-cocktail-card>
   </div>
 </div>

@@ -3,14 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { CocktailListComponent } from './components/cocktail-list/cocktail-list.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/cocktail-list', pathMatch: 'full' },
+  { path: '', redirectTo: '/cocktails', pathMatch: 'full' },
   {
-    path: 'cocktail-list',
+    path: 'cocktails',
     component: CocktailListComponent,
   },
   {
     path: '**',
-    redirectTo: '/cocktail-list',
+    redirectTo: '/cocktails',
   },
 ];
 
