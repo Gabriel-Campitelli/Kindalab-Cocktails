@@ -13,10 +13,9 @@ export class CocktailListComponent implements OnInit {
 
   constructor(private cocktailService: CocktailsService) {
     this.cocktailService.getAllCocktails().subscribe((cocktail: Cocktail) => {
-      console.log('cocktails: ', cocktail);
       this.drinks = cocktail.drinks;
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }

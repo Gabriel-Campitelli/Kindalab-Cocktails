@@ -31,7 +31,6 @@ export class CocktailDetailComponent implements OnInit {
 
     this.cocktailService.getCocktailDetail(this.drinkId).subscribe((cocktail: Cocktail) => {
       this.drink = cocktail.drinks[0];
-      console.log("drink: ", this.drink)
     });
 
   }
