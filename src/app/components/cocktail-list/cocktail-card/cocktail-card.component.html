@@ -1,7 +1,17 @@
-<div fxLayout="row" fxLayoutAlign="space-between" class="drink-card">
-  <div fxLayout="column">
-    <h2>{{ drink.strDrink }}</h2>
-    <button (click)="mostrarDetalle(drink)">Ver detalles</button>
+<div fxLayout="row" fxLayoutAlign="space-between" class="drink-card" (click)="mostrarDetalle(drink)">
+
+  <div fxLayout="column" class="full-width">
+
+    <h2 style="margin: 5px;">{{ drink.strDrink }}</h2>
+
+    <ul>
+      <li>Mocked ingredient 1</li>
+      <li>Mocked ingredient 2</li>
+      <li>Mocked ingredient 3</li>
+    </ul>
+
   </div>
+
   <img [src]="drink.strDrinkThumb" />
+
 </div>

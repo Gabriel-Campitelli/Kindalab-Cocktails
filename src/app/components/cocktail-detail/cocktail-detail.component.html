@@ -1,25 +1,26 @@
 <div fxLayout="column" fxLayoutAlign="center center">
     <div class="container" fxLayout="column" fxLayoutAlign="start center">
-        <div style="width: 100%;" fxLayout="row" fxLayoutAlign="start ">
+        <div style="width: 100%;" fxLayout="row" fxLayoutAlign="start">
             <button (click)="inicio()"><i class="arrow left"></i></button>
-            <div style="margin-left: 115px;">
-                {{drink.strDrink}}
+        </div>
+        <div class="card">
+            <div fxLayout="column" fxLayoutAlign="center center">
+                <h2 style="margin: 5px;">{{drink.strDrink}}</h2>
+                <div fxLayoutAlign="center center">
+                    <img class="image" [src]="drink.strDrinkThumb" />
+                </div>
+            </div>
+            <div fxLayout="column">
+                <ul>
+                    <li>{{isDefined(drink.strMeasure1) ? drink.strMeasure1 : 'N/D'}}</li>
+                    <li>{{isDefined(drink.strMeasure2) ? drink.strMeasure2 : 'N/D'}}</li>
+                    <li>{{isDefined(drink.strMeasure3) ? drink.strMeasure3 : 'N/D'}}</li>
+                    <li>{{isDefined(drink.strMeasure4) ? drink.strMeasure4 : 'N/D'}}</li>
+                </ul>
+
+                <li>How to prepare</li>
+                <p>{{drink.strInstructions}}</p>
             </div>
         </div>
-        <div class="card" fxLayout="column">
-            <div fxLayoutAlign="center center">
-                <img class="image" [src]="drink.strDrinkThumb" />
-            </div>
-
-            <ul>
-                <li>{{isDefined(drink.strMeasure1) ? drink.strMeasure1 : 'N/D'}}</li>
-                <li>{{isDefined(drink.strMeasure2) ? drink.strMeasure2 : 'N/D'}}</li>
-                <li>{{isDefined(drink.strMeasure3) ? drink.strMeasure3 : 'N/D'}}</li>
-                <li>{{isDefined(drink.strMeasure4) ? drink.strMeasure4 : 'N/D'}}</li>
-            </ul>
-
-            <p>{{drink.strInstructions}}</p>
-        </div>
-
     </div>
 </div>

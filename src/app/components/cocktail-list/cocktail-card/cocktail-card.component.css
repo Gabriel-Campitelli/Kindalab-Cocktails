@@ -1,3 +1,7 @@
+.full-width {
+  width: 100% !important;
+}
+
 .drink-card {
   background-color: white;
   border-radius: 10px;
@@ -6,6 +10,10 @@
   width: 450px !important;
   margin: 10px 0px;
   padding: 10px;
+}
+
+.drink-card:hover {
+  cursor: pointer;
 }
 
 img {
