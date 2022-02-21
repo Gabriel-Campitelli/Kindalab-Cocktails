@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Drink } from 'src/app/models/drink-model';
 
 @Component({
@@ -6,10 +7,12 @@ import { Drink } from 'src/app/models/drink-model';
   templateUrl: './cocktail-card.component.html',
   styleUrls: ['./cocktail-card.component.css'],
 })
-export class CocktailCardComponent implements OnInit {
+export class CocktailCardComponent {
   @Input() drink: Drink;
 
-  constructor() {}
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {}
+  mostrarDetalle(drink: Drink) {
+    this.router.navigate(['/', 'cocktail', drink.idDrink], { queryParams: { id: drink.idDrink } })
+  }
 }

@@ -27,4 +27,4 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

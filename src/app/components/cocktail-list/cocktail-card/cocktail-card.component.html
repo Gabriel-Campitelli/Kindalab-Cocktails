@@ -1,4 +1,7 @@
 <div fxLayout="row" fxLayoutAlign="space-between" class="drink-card">
-  <h2>{{ drink.strDrink }}</h2>
+  <div fxLayout="column">
+    <h2>{{ drink.strDrink }}</h2>
+    <button (click)="mostrarDetalle(drink)">Ver detalles</button>
+  </div>
   <img [src]="drink.strDrinkThumb" />
 </div>
